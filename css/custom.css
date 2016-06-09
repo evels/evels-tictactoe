@@ -1,0 +1,88 @@
+
+.t3_grid {
+  margin: 0 auto;
+  width:360px;
+}
+
+.t3_grid td {
+  border:10px solid transparent;
+  cursor: pointer;
+  font-size:60px;
+  font-weight: bold;
+  height:100px;
+  text-align: center;
+  width: 100px;
+}
+
+.t3_grid td.filled {
+  cursor: auto;
+}
+
+.t3_grid td span {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.t3_grid td.filled span {
+  opacity: 1;
+}
+
+.t3_grid td span.playerX {
+  color: red;
+}
+
+.t3_grid td span.playerO {
+  color: blue;
+}
+
+.t3_grid tr td:nth-child(1),
+.t3_grid tr td:nth-child(2)  {
+  border-right-color: black;
+}
+
+.t3_grid tr:nth-child(1) td,
+.t3_grid tr:nth-child(2) td {
+  border-bottom-color: black;
+}
+
+button {
+	box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background-color:#007dc1;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+  margin: 0 auto 50px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+}
+button:hover {
+	background-color:#0061a7;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+.reset {
+  display: none;
+}
+
+.reset.active {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .t3_grid {
+    width: 480px;
+  }
+  .t3_grid td {
+    font-size: 60px;
+    height: 150px;
+    width: 150px;
+  }
+}
