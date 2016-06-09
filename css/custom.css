@@ -1,11 +1,23 @@
-
+body {
+  margin: 0;
+}
+.game {
+  clear: both;
+  margin: 0 auto 100px;
+}
 .t3_grid {
-  margin: 0 auto;
-  width:360px;
+  margin: 0 auto 30px;
+  width:330px;
+}
+
+.t3_grid:after {
+  content:'';
+  clear: both;
+  overflow: auto;
 }
 
 .t3_grid td {
-  border:10px solid transparent;
+  border:5px solid transparent;
   cursor: pointer;
   font-size:60px;
   font-weight: bold;
@@ -77,10 +89,15 @@ button:active {
 }
 
 @media only screen and (min-width: 768px) {
+  body {
+    margin: 20px;
+  }
   .t3_grid {
+    float:left;
     width: 480px;
   }
   .t3_grid td {
+    border-width: 10px;
     font-size: 60px;
     height: 150px;
     width: 150px;

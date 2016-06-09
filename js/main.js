@@ -9,8 +9,9 @@ $(document).ready(function() {
       $(this).addClass('filled');
       $('span', this).addClass('player' + players[marker]).append(players[marker]);
       turn++;
+      var $parent = $(this).parent().parent().parent().parent(); //heh.
+      $('.reset', $parent).addClass('active');
     }
-    $('.reset').addClass('active');
   });
 
   //add another game
